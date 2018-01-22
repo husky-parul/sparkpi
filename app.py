@@ -29,10 +29,9 @@ def produce_pi(scale):
 def index():
    # return "Python Flask SparkPi server running. Add the 'sparkpi' route to this URL to invoke the app."
    scale = int(request.args.get('scale', 2))
-    pi = produce_pi(scale)
-    response = "Pi is roughly {}".format(pi)
-
-    return response
+   pi = produce_pi(scale)
+   response = "Pi is roughly {}".format(pi)
+   return response
 
 
 @app.route("/sparkpi")
