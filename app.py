@@ -36,7 +36,7 @@ def index():
 
 @app.route("/sparkpi")
 def sparkpi():
-    scale = int(request.args.get('scale', 2))
+    scale = int(request.args.get('scale', 1))
     pi = produce_pi(scale)
     response = "Pi is roughly {}".format(pi)
 
