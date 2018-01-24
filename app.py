@@ -36,11 +36,10 @@ def index():
 
 @app.route("/sparkpi")
 def sparkpi():
-    scale = int(request.args.get('scale', 1))
-    pi = produce_pi(scale)
-    response = "Pi is roughly {}".format(pi)
-
-    return response
+    # scale = int(request.args.get('scale', 1))
+    # pi = produce_pi(scale)
+    # response = "Pi is roughly {}".format(pi)
+    return "Python Flask SparkPi server running. Add the 'sparkpi' route to this URL to invoke the app."
 
 
 if __name__ == "__main__":
