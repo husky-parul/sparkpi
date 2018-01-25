@@ -30,53 +30,53 @@ if __name__ == "__main__":
     # # -------------------
     print('-' * 40)
     print('making request: %s' % url_dataverse_id)
-    r = requests.post(url_dataverse_id, data=data)
+    # r = requests.post(url_dataverse_id, data=data)
+
+    # # # -------------------
+    # # # Print the response
+    # # # -------------------
+    # print('-' * 40)
+    # print(r.status_code)
+    # json_str=r.json()
+    # print 'This is json_str \n',json_str
+
+
+    # # --------------------------------------------------
+    # # Get id and persistentId of created dataset
+    # # --------------------------------------------------
+    # dataset_id = json_str['data']['id'] # database id of the dataset
+    
+    # # --------------------------------------------------
+    # # Prepare "file"
+    # # --------------------------------------------------
+    # file_content = 'content: %s' % datetime.datetime.now()
+    # files = {'file': ('sample_file.txt', file_content)}
+
+    # # --------------------------------------------------
+    # # Using a "jsonData" parameter, add optional description + file tags
+    # # --------------------------------------------------
+    # params = dict(description='Blue skies!',categories=['Lily', 'Rosemary', 'Jack of Hearts'])
+    # params_as_json_string = json.dumps(params)
+    # payload = dict(jsonData=params_as_json_string)
+
+    # # --------------------------------------------------
+    # # Add file using the Dataset's id
+    # # --------------------------------------------------
+    # # curl version
+    # # POST http://$SERVER/api/datasets/$id/add?key=$apiKey
+    # url_dataset_id = '%s/api/datasets/%s/add?key=%s' % (dataverse_server, dataset_id, api_key)
+
+
+    # # -------------------
+    # # Make the request
+    # # -------------------
+    # print('-' * 40)
+    # print('making request: %s' % url_dataset_id)
+    # r = requests.post(url_dataset_id, data=payload, files=files)
 
     # # -------------------
     # # Print the response
     # # -------------------
-    print('-' * 40)
-    print(r.status_code)
-    json_str=r.json()
-    print 'This is json_str \n',json_str
-
-
-    # --------------------------------------------------
-    # Get id and persistentId of created dataset
-    # --------------------------------------------------
-    dataset_id = json_str['data']['id'] # database id of the dataset
-    
-    # --------------------------------------------------
-    # Prepare "file"
-    # --------------------------------------------------
-    file_content = 'content: %s' % datetime.datetime.now()
-    files = {'file': ('sample_file.txt', file_content)}
-
-    # --------------------------------------------------
-    # Using a "jsonData" parameter, add optional description + file tags
-    # --------------------------------------------------
-    params = dict(description='Blue skies!',categories=['Lily', 'Rosemary', 'Jack of Hearts'])
-    params_as_json_string = json.dumps(params)
-    payload = dict(jsonData=params_as_json_string)
-
-    # --------------------------------------------------
-    # Add file using the Dataset's id
-    # --------------------------------------------------
-    # curl version
-    # POST http://$SERVER/api/datasets/$id/add?key=$apiKey
-    url_dataset_id = '%s/api/datasets/%s/add?key=%s' % (dataverse_server, dataset_id, api_key)
-
-
-    # -------------------
-    # Make the request
-    # -------------------
-    print('-' * 40)
-    print('making request: %s' % url_dataset_id)
-    r = requests.post(url_dataset_id, data=payload, files=files)
-
-    # -------------------
-    # Print the response
-    # -------------------
-    print('-' * 40)
-    print(r.json())
-    print(r.status_code)
+    # print('-' * 40)
+    # print(r.json())
+    # print(r.status_code)
