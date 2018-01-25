@@ -49,7 +49,7 @@ if __name__ == "__main__":
     # --------------------------------------------------
     # Prepare "file"
     # --------------------------------------------------
-    file_content = 'content: %s' % datetime.now()
+    file_content = 'content: %s' % datetime.datetime.now()
     files = {'file': ('sample_file.txt', file_content)}
 
     # --------------------------------------------------
