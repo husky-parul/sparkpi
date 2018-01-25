@@ -80,16 +80,3 @@ if __name__ == "__main__":
     print('-' * 40)
     print(r.json())
     print(r.status_code)
-
-
-
-
-    # sc = SparkContext(appName="PythonRestCall")
-    # sqlContext=SQLContext(sc)
-    # spark=sqlContext.sparkSession
-    
-
-    # path = "output.json"
-    # df = spark.read.json(path)
-    # df.show()
-    
